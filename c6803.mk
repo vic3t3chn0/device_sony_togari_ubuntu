@@ -82,4 +82,4 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-2048-dalvi
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
 # Include non-opensource parts
-#$(call inherit-product, vendor/sony/togari/togari-vendor.mk)
+$(call inherit-product, vendor/sony/togari/togari-vendor.mk)

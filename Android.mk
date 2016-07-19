@@ -1,5 +1,4 @@
-LOCAL_PATH := $(call my-dir)
-
-ifeq ($(TARGET_DEVICE),togari)
-    include $(call first-makefiles-under,$(LOCAL_PATH))
-endif
+#
+# This empty Android.mk file exists to prevent the build system from
+# automatically including any other Android.mk files under this directory.
+#

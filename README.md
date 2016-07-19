@@ -1,7 +1,7 @@
-<<<<<<< HEAD
-android_device_sony_togari
-==========================
-=======
-# device_sony_togari_ubuntu
-Device togari files for Ubuntu
->>>>>>> 5dfc0864613f10d7c39f0c13b10dc99f4cd8797b
+Copyright (C) Sony Mobile Communications 2014
+=============================================
+
+This is the Android device configuration for Xperia Z Ultra (rhine platform).
+
+Build instructions
+http://developer.sonymobile.com/knowledge-base/open-source/open-devices/aosp-build-instructions/

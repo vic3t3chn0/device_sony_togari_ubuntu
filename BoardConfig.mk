@@ -1,4 +1,4 @@
-# Copyright (C) 2013 The CyanogenMod Project
+# Copyright 2014 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,32 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# inherit from the common rhine definitions
--include device/sony/rhine/BoardConfigCommon.mk
+include device/sony/rhine/PlatformConfig.mk
 
-# inherit from the proprietary version
--include vendor/sony/togari/BoardConfigVendor.mk
-PRODUCT_VENDOR_KERNEL_HEADERS := device/sony/rhine/kernel-headers
-TARGET_KERNEL_DIR := kernel/sony/yuga
-TARGET_KERNEL_CONFIG := aosp_rhine_togari_defconfig 
-TARGET_ARCH := arm
-TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_BOARD_PLATFORM = msm8974
-TARGET_CPU_ABI := armeabi-v7a
-TARGET_CPU_ABI2 := armeabi
-TARGET_CPU_VARIANT := krait
-TARGET_CPU_SMP := true
-TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
-TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
-TARGET_NO_RADIOIMAGE := true
-TARGET_NO_RECOVERY := false
-TARGET_NO_KERNEL := false
-# Assert
-#TARGET_RECOVERY_INITRC := 
-TARGET_OTA_ASSERT_DEVICE := C6802,C6806,C6833,C6843,togari
+TARGET_BOOTLOADER_BOARD_NAME := C6833
 
-TARGET_SPECIFIC_HEADER_PATH += device/sony/togari/include
-
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/togari/bluetooth
-
-TARGET_BOOTLOADER_BOARD_NAME := C6803
+BOARD_KERNEL_CMDLINE += androidboot.hardware=togari
+BOARD_KERNEL_CMDLINE += mem=1759M
